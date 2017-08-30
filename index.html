@@ -1,182 +1,263 @@
 <!doctype html>
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
-    <title>底部导航</title>
-    <link rel="stylesheet" type="text/css" href="./css/api.css" />
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <title>登陆</title>
     <style>
-        header {
-            background-color: #f2f2f2;
+        html {
+            height: 100%;
+            background-color: #fff;
         }
 
-        header ul li {
+        body {
+            background-color: #fff;
+            padding: 0;
+            margin: 0;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: flex;
+            height: 100%;
+            -webkit-box-orient: vertical;
+            -webkit-flex-flow: column;
+            flex-flow: column;
+            background-image: url("./image/bg/bg.jpg");
+        }
+
+        .login-label-box {
+            text-align: center;
+            font-size: 22px;
+            padding-bottom: 15px;
+            /*font-family: "Courier New","Times New Roman";*/
+        }
+
+        .login-container {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 5px;
+            /*background-color: #ffffff;*/
+            padding: 15px;
+            text-align: center;
+            top: 50%;
+            transform: translate(0, 30%);
+
+        }
+
+        .login-box {
+            border: 1px solid silver;
+            border-radius: 5px;
             height: 50px;
-            line-height: 50px;
-            text-align: center;
-            display: none;
-            color: #323237;
-            position: relative;
-            font-size: 18px;
+            margin: 0 auto;
+            width: 85%;
+            align-items: center;
+            display: flex;
+            padding: 5px;
+
         }
 
-        header ul li.active {
-            display: block;
+        .login-label {
+            align-items: center;
         }
 
-        #footer {
-            background-color: #f2f2f2;
+        .login-input {
+            border-bottom: 0;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
         }
 
-        #footer ul li {
-            padding-top: 36px;
-            padding-bottom: 4px;
-            background: url() no-repeat center 2px;
-            background-size: auto 30px;
-            text-align: center;
+        .login-pwd {
+            border-top: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
         }
 
-        #footer ul li.active {
-            color: #6ab494;
+        .login-btn-normal {
+            width: 85%;
+            height: 50px;
+            background-color: #009fca;
+            border-radius: 5px;
+            border: 0;
+            margin: 0 auto;
+            outline: none;
+            box-shadow: 2px 2px 2px #009fca;
+            color: white;
+            font-size: 14px;
         }
 
-        #footer ul li:nth-child(1) {
-            background-image: url(./image/bottombtn0101.png);
+        .login-btn-on {
+            box-shadow: 2px 2px 2px #0364ad;
+            background-color: #0364ad;
+            color: white;
         }
 
-        #footer ul li:nth-child(2) {
-            background-image: url(./image/bottombtn0201.png);
+        .login-remember {
+            margin: 0 auto;
+            width: 85%;
+            text-align: left;
+            padding: 15px 0;
         }
 
-        #footer ul li:nth-child(3) {
-            background-image: url(./image/bottombtn0301.png);
+        .login-input-text {
+            border: none;
+            padding: 10px;
+            outline: none;
         }
 
-        #footer ul li:nth-child(4) {
-            background-image: url(./image/bottombtn0401.png);
+        .bottomLine {
+            border-bottom: 1px solid silver;
         }
 
-        #footer ul li:nth-child(1).active {
-            background-image: url(./image/bottombtn0102.png);
-        }
-
-        #footer ul li:nth-child(2).active {
-            background-image: url(./image/bottombtn0202.png);
-        }
-
-        #footer ul li:nth-child(3).active {
-            background-image: url(./image/bottombtn0302.png);
-        }
-
-        #footer ul li:nth-child(4).active {
-            background-image: url(./image/bottombtn0402.png);
-        }
-
-        .flex-con {
-            overflow: auto
+        .test {
+            /*border: 1px solid red;*/
         }
     </style>
 </head>
-
 <body>
-    <div id="wrap" class="flex-wrap flex-vertical">
-        <header>
-            <ul>
-                <li class="border-b active">云API</li>
-                <li class="border-b">端API</li>
-                <li class="border-b">开发</li>
-                <li class="border-b">文档</li>
-            </ul>
-        </header>
-        <div id="main" class="flex-con">
-
-        </div>
-        <div id="footer" class="border-t">
-            <ul class="flex-wrap">
-                <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con active">云API</li>
-                <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con">端API</li>
-                <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con">开发</li>
-                <li tapmode="hover" onclick="randomSwitchBtn( this );" class="flex-con">文档</li>
-            </ul>
-        </div>
+<div class="login-container">
+    <div class="login-label-box">
+        欢迎登陆
     </div>
-</body>
+    <div class="login-box login-input">
+        <div class="login-label test">
+            账号：
+        </div>
+        <input class="login-input-text test" id="login-input" type="text" placeholder="请输入用户名！"/>
 
-</html>
-<script type="text/javascript" src="script/api.js"></script>
+    </div>
+    <div class="login-box login-pwd">
+        <div class="login-label test">
+            密码：
+        </div>
+        <input class="login-input-text" id="login-pwd" type="password" placeholder="请输入密码！"/>
+    </div>
+    <div class="login-remember">
+        <input type="checkbox" id="remember" onclick="rememberUser(this)"/><label for="remember">记住密码</label>
+    </div>
+
+    <button tapmode="login-btn-normal login-btn-on" class="login-btn-normal" type="button" value="登陆" onclick="login()">
+        登陆
+    </button>
+
+</div>
+
+</body>
+<script type="text/javascript" src="./script/api.js"></script>
+<script type="text/javascript" src="./script/Common.js"></script>
 <script type="text/javascript">
-    apiready = function() {
-        $api.fixStatusBar($api.dom('header'));
-        api.setStatusBarStyle({
-            style: 'dark',
-            color: '#6ab494'
-        });
-        funIniGroup();
+    const BASEPATH = 'html/Home/';
+
+    apiready = function () {
+        let token = $api.getStorage('token');
+        //有服务器登录记录就直接登录服务器
+        if (token) {
+            login(token);
+        }
+    };
+
+    /**
+     * 自动登录
+     * */
+    function autoLogin(token) {
+        ajax.get('../ajax.json').send({token: token}).end(function (res, err) {
+            //todo...登录之后的
+            loginCallback(res)
+        })
     }
 
-    function funIniGroup() {
-        var eHeaderLis = $api.domAll('header li'),
-            frames = [];
-        for (var i = 0, len = eHeaderLis.length; i < len; i++) {
-            frames.push({
-                name: 'frame' + i,
-                url: './html/frame' + i + '.html',
-                bgColor: 'rgba(0,0,0,.2)',
-                bounces: true
-            })
-        }
+    /***
+     * 登录回调函数
+     * */
+    function loginCallback(ret) {
+        //登录界面
+        //api.sendEvent广播登录成功事件
+
+        api.sendEvent({
+            name: 'loginSuccess'
+        });
+        //api.setPrefs设置登录成功状态
+        api.setPrefs({
+            key: 'loginStatus',
+            value: 'loginSuccess'
+        });
+//        api.openSlidLayout({
+//            type: 'left',
+//            fixedPane: {
+//                name: 'win1',
+//                url: './html/Home/fixed.html'
+//            },
+//            slidPane: {
+//                name: 'win2',
+//                url: './html/Home/slide.html'
+//
+//            }
+//        }, function (ret, err) {
+//
+//        });
         api.openFrameGroup({
-            name: 'group',
-            scrollEnabled: false,
+            name: 'group1',
             rect: {
                 x: 0,
-                y: $api.dom('header').offsetHeight,
-                w: api.winWidth,
-                h: $api.dom('#main').offsetHeight
+                y: 0,
+                w: 'auto',
+                h: 'auto'
             },
-            index: 0,
-            frames: frames
-        }, function(ret, err) {
+            frames: [{
+                name: 'frame1',
+                url: BASEPATH + 'fixed.html',
+                bgColor: '#fff'
+            }, {
+                name: 'frame2',
+                url: BASEPATH + 'slide.html',
+                bgColor: '#fff'
+            }]
 
+
+        }, function (ret, err) {
+            var index = ret.index;
         });
     }
 
-    // 随意切换按钮
-    function randomSwitchBtn(tag) {
+    /**
+     * 登录
+     * */
+    //todo...登录之后的
+    function login(token) {
+        const userName = $api.dom('#login-input');
+        const pwd = $api.dom('#login-pwd');
+//        ajax.get('../ajax.json').send({token: token, userName: userName, pwd: pwd}).end(function (res, err) {
+//            if (!err && res.body) {
+//                //重新存储token
+//                !res.body.token && ($api.setStorage('token', res.body.token));
+//                loginCallback(res)
+//            }
+//
+//        })
 
-        var baiduMap = api.require('baiduMap');
-        baiduMap.open({
-            x: 0,
-            y: 64,
-            w: 320,
-            h: 400
-        }, function(ret, err) {
-            if (ret.status) {
-                alert(JSON.stringify(ret));
-            } else {
-                alert(JSON.stringify(err));
+        api.openDrawerLayout({
+            name: 'main',
+            url: BASEPATH + 'slide.html',
+            animation: {
+                type: 'none'
+            },
+            leftPane: {
+                edge: 150,
+                name: 'leftPane',
+                url: BASEPATH + 'fixed.html',
             }
         });
-        if (tag == $api.dom('#footer li.active')) return;
-        var eFootLis = $api.domAll('#footer li'),
-            eHeaderLis = $api.domAll('header li'),
-            index = 0;
-        for (var i = 0, len = eFootLis.length; i < len; i++) {
-            if (tag == eFootLis[i]) {
-                index = i;
-            } else {
-                $api.removeCls(eFootLis[i], 'active');
-                $api.removeCls(eHeaderLis[i], 'active');
-            }
-        }
-        $api.addCls(eFootLis[index], 'active');
-        $api.addCls(eHeaderLis[index], 'active');
-        api.setFrameGroupIndex({
-            name: 'group',
-            index: index
-        });
+//        loginCallback()
+    }
+
+    /**
+     * 记住登录用户信息
+     */
+    function rememberUser() {
+        let checked = document.getElementById('remember').checked;
+        $api.setStorage('remember', checked)
     }
 </script>
+</html>
