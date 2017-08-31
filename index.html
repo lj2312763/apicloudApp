@@ -183,42 +183,39 @@
             key: 'loginStatus',
             value: 'loginSuccess'
         });
-//        api.openSlidLayout({
-//            type: 'left',
-//            fixedPane: {
-//                name: 'win1',
-//                url: './html/Home/fixed.html'
-//            },
-//            slidPane: {
-//                name: 'win2',
-//                url: './html/Home/slide.html'
-//
-//            }
-//        }, function (ret, err) {
-//
-//        });
-        api.openFrameGroup({
-            name: 'group1',
-            rect: {
-                x: 0,
-                y: 0,
-                w: 'auto',
-                h: 'auto'
+        api.openSlidLayout({
+            type: 'left',
+            fixedPane: {
+                name: 'win1',
+                url: './html/Home/fixed.html'
             },
-            frames: [{
-                name: 'frame1',
-                url: BASEPATH + 'fixed.html',
-                bgColor: '#fff'
-            }, {
-                name: 'frame2',
-                url: BASEPATH + 'slide.html',
-                bgColor: '#fff'
-            }]
-
-
+            slidPane: {
+                name: 'win2',
+                url: './html/Home/slide.html'
+            }
         }, function (ret, err) {
-            var index = ret.index;
+
         });
+//        api.openFrameGroup({
+//            name: 'group1',
+//            rect: {
+//                x: 0,
+//                y: 0,
+//                w: 'auto',
+//                h: 'auto'
+//            },
+//            frames: [{
+//                name: 'frame1',
+//                url: BASEPATH + 'fixed.html',
+//                bgColor: '#fff'
+//            }, {
+//                name: 'frame2',
+//                url: BASEPATH + 'slide.html',
+//                bgColor: '#fff'
+//            }]
+//        }, function (ret, err) {
+//            var index = ret.index;
+//        });
     }
 
     /**
@@ -249,7 +246,21 @@
                 url: BASEPATH + 'fixed.html',
             }
         });
-//        loginCallback()
+
+//        api.openFrame({
+//            name: 'page2',
+//            url: BASEPATH + 'slide.html',
+//            rect: {
+//                x: 0,
+//                y: 0,
+//                w: 'auto',
+//                h: 'auto'
+//            },
+//            pageParam: {
+//                name: 'test'
+//            }
+//        });
+        loginCallback()
     }
 
     /**
